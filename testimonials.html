@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testimonials - Precision Remodeling</title>
+    <link rel="stylesheet" href="style.css">
+
+<!-- Google Analytics Placeholder -->
+<script>
+  console.log('Google Analytics placeholder loaded');
+</script>
+
+</head>
+<body style="background-color: #fdf6ee;">
+    
+<header>
+    <h1>Precision Remodeling</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a><a href="blog.html">Blog</a></nav>
+</header>
+
+    <main class="container" style="text-align:center;">
+        <h2 style="color:#F4B400;">What Our Clients Say</h2>
+        <div class="testimonial-card" style="display:none;">
+            <blockquote>
+                “Robert and his team were amazing—on time, professional, and the results exceeded expectations!”
+            </blockquote>
+            <p><strong>– T. Carter, Queens, NY</strong></p>
+            <a href="gallery.html">See the Renovation</a>
+        </div>
+        <div class="testimonial-card">
+            <blockquote>
+                “The kitchen remodel exceeded my expectations. Precision Remodeling handled everything smoothly from start to finish.”
+            </blockquote>
+            <p><strong>– J. Rivera, Brooklyn, NY</strong></p>
+            <a href="gallery.html">View Kitchen Project</a>
+        </div>
+        <button onclick="window.location.href='contact.html#reviewForm'">Leave a Review</button>
+    <div style="text-align:center; margin-top: 30px;"><a class="cta" href="contact.html">Get Your Free Quote</a></div>
+</main>
+<script>
+let index = 0;
+const testimonials = document.querySelectorAll('.testimonial-card');
+function showTestimonial(i) {
+    testimonials.forEach((el, idx) => {
+        el.style.display = idx === i ? 'block' : 'none';
+    });
+}
+document.addEventListener('DOMContentLoaded', () => {
+    showTestimonial(index);
+    setInterval(() => {
+        index = (index + 1) % testimonials.length;
+        showTestimonial(index);
+    }, 4000);
+});
+</script>
+
+    
+
+<footer>
+    <p>&copy; 2025 Precision Remodeling. All rights reserved.</p>
+    <p>Contact: info@precisionremodeling.com | (555) 123-4567</p>
+<div style="margin-top:10px;">✔ Licensed & Insured &nbsp;&nbsp;✔ Satisfaction Guaranteed &nbsp;&nbsp;✔ Locally Trusted</div></footer>
+
+
+</body>
+</html>

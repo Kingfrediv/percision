@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Precision Remodeling</title>
+    <link rel="stylesheet" href="style.css">
+
+<!-- Google Analytics Placeholder -->
+<script>
+  console.log('Google Analytics placeholder loaded');
+</script>
+
+</head>
+<body style="background-color: #fdf6ee;">
+    
+<header>
+    <h1>Precision Remodeling</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a><a href="blog.html">Blog</a></nav>
+</header>
+
+    <main>
+        <h2 style="color:#F4B400;">Contact & Request a Quote</h2>
+        <form onsubmit="return validateForm()" id="reviewForm">
+            <label>Name: <input type="text" name="name"></label><br>
+            <label>Email: <input type="email" name="email"></label><br>
+            <label>Phone: <input type="text" name="phone"></label><br>
+            <label>Project Description:<br><textarea name="description"></textarea></label><br>
+            <label>Upload Photo: <input type="file" name="photo"></label><br>
+            <button type="submit">Submit</button>
+        </form>
+    
+<script>
+function validateForm() {
+    const email = document.querySelector('input[type="email"]').value;
+    const phone = document.querySelector('input[type="text"]').value;
+    if (!email.includes('@') || phone.length < 10) {
+        alert('Please enter a valid email and phone number.');
+        return false;
+    }
+    return true;
+}
+</script>
+<div style="text-align:center; margin-top: 30px;"><a class="cta" href="contact.html">Get Your Free Quote</a></div>
+</main>
+
+    
+
+<footer>
+    <p>&copy; 2025 Precision Remodeling. All rights reserved.</p>
+    <p>Contact: info@precisionremodeling.com | (555) 123-4567</p>
+<div style="margin-top:10px;">✔ Licensed & Insured &nbsp;&nbsp;✔ Satisfaction Guaranteed &nbsp;&nbsp;✔ Locally Trusted</div></footer>
+
+
+</body>
+</html>
